@@ -1,6 +1,5 @@
 "use client";
 import { useForm } from "react-hook-form";
-import { Toast } from "flowbite-react";
 import useSWRMutation from "swr/mutation";
 import fetcher from "@/core/fetcher";
 
@@ -40,14 +39,6 @@ export default function SetupAgency() {
         </button>
       </form>
       {data}
-      {data && (
-        <Toast>
-          <div className="ml-3 text-sm font-normal">
-            Agency created successfully!
-          </div>
-          <Toast.Toggle />
-        </Toast>
-      )}
     </main>
   );
 }
