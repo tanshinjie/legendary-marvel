@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  db-local:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: legendaryDB
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: db_user_pass
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    ports:
+      - 3306:3306
+
+  phpmyadmin:
+    image: phpmyadmin
+    environment:
+      PMA_HOST: db-local
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 9483:80

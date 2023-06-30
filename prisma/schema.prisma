@@ -1,0 +1,244 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+// Basic schema
+model Hero {
+  id             Int              @id @default(autoincrement())
+  name           String
+  GameMainHero   GameMainHero[]
+  GameAgencyHero GameAgencyHero[]
+  GameFreeAgent  GameFreeAgent[]
+  Campaign       Campaign?        @relation(fields: [campaignId], references: [id])
+  campaignId     Int?
+
+  @@index([campaignId])
+}
+
+model Mastermind {
+  id             Int              @id @default(autoincrement())
+  name           String
+  GameMastermind GameMastermind[]
+}
+
+model Scheme {
+  id            Int          @id @default(autoincrement())
+  name          String
+  consequence   Consequence  @relation(fields: [consequenceId], references: [id])
+  consequenceId Int          @unique
+  Game          Game[]
+  GameScheme    GameScheme[]
+  Campaign      Campaign[]
+}
+
+model Consequence {
+  id                  Int                   @id @default(autoincrement())
+  name                String
+  scheme              Scheme?
+  CampaignConsequence CampaignConsequence[]
+}
+
+model Henchman {
+  id           Int            @id @default(autoincrement())
+  name         String
+  Game         Game?          @relation(fields: [gameId], references: [id])
+  gameId       Int?
+  GameHenchman GameHenchman[]
+  Campaign     Campaign?      @relation(fields: [campaignId], references: [id])
+  campaignId   Int?
+
+  @@index([campaignId])
+  @@index([gameId])
+}
+
+model Villain {
+  id              Int               @id @default(autoincrement())
+  name            String
+  Campaign        Campaign?         @relation(fields: [campaignId], references: [id])
+  campaignId      Int?
+  Game            Game?             @relation(fields: [gameId], references: [id])
+  gameId          Int?
+  GameFreeVillain GameFreeVillain[]
+
+  @@index([campaignId])
+  @@index([gameId])
+}
+
+// Game schema
+model Game {
+  id               Int              @id @default(autoincrement())
+  gameMastermind   GameMastermind?  @relation(fields: [gameMastermindId], references: [id])
+  gameMastermindId Int?             @unique
+  GameMainHero     GameMainHero     @relation(fields: [mainHeroId], references: [id])
+  mainHeroId       Int              @unique
+  agencyHeroes     GameAgencyHero[]
+  freeAgents       GameFreeAgent[]
+
+  outcome      Outcome?
+  henchmen     GameHenchman[]
+  freeVillains GameFreeVillain[]
+  Campaign     Campaign          @relation(fields: [campaignId], references: [id])
+  campaignId   Int
+  Henchman     Henchman[]
+  Villain      Villain[]
+  Scheme       Scheme?           @relation(fields: [schemeId], references: [id])
+  schemeId     Int?
+  GameScheme   GameScheme[]
+
+  @@index([campaignId])
+  @@index([gameMastermindId])
+  // @@index([mainHeroId])
+  @@index([schemeId])
+}
+
+enum Outcome {
+  WIN
+  LOSE
+  DRAW
+}
+
+model GameMainHero {
+  id     Int   @id @default(autoincrement())
+  gameId Int
+  hero   Hero  @relation(fields: [heroId], references: [id])
+  heroId Int
+  state  State
+  Game   Game?
+
+  @@index([gameId])
+  @@index([heroId])
+}
+
+model GameAgency {
+  id             Int              @id @default(autoincrement())
+  name           String
+  GameAgencyHero GameAgencyHero[]
+}
+
+model GameAgencyHero {
+  id       Int        @id @default(autoincrement())
+  game     Game       @relation(fields: [gameId], references: [id])
+  gameId   Int
+  agency   GameAgency @relation(fields: [agencyId], references: [id])
+  agencyId Int
+  hero     Hero       @relation(fields: [heroId], references: [id])
+  heroId   Int
+  state    State
+
+  @@index([gameId])
+  @@index([heroId])
+  @@index([agencyId])
+}
+
+model GameFreeAgent {
+  id         Int       @id @default(autoincrement())
+  game       Game      @relation(fields: [gameId], references: [id])
+  gameId     Int
+  hero       Hero      @relation(fields: [heroId], references: [id])
+  heroId     Int
+  state      State
+  Campaign   Campaign? @relation(fields: [campaignId], references: [id])
+  campaignId Int?
+
+  @@index([gameId])
+  @@index([heroId])
+}
+
+model GameMastermind {
+  id           Int        @id @default(autoincrement())
+  gameId       Int
+  mastermind   Mastermind @relation(fields: [mastermindId], references: [id])
+  mastermindId Int
+  state        State
+  Game         Game[]
+
+  @@index([gameId])
+  @@index([mastermindId])
+}
+
+model GameFreeVillain {
+  id         Int       @id @default(autoincrement())
+  game       Game      @relation(fields: [gameId], references: [id])
+  gameId     Int
+  villain    Villain   @relation(fields: [villainId], references: [id])
+  villainId  Int
+  state      State
+  Campaign   Campaign? @relation(fields: [campaignId], references: [id])
+  campaignId Int?
+
+  @@index([campaignId])
+  @@index([gameId])
+  @@index([villainId])
+}
+
+model GameHenchman {
+  id         Int      @id @default(autoincrement())
+  game       Game     @relation(fields: [gameId], references: [id])
+  gameId     Int
+  henchman   Henchman @relation(fields: [henchmanId], references: [id])
+  henchmanId Int
+  state      State
+
+  @@index([gameId])
+  @@index([henchmanId])
+}
+
+model GameScheme {
+  id       Int    @id @default(autoincrement())
+  game     Game   @relation(fields: [gameId], references: [id])
+  gameId   Int
+  scheme   Scheme @relation(fields: [schemeId], references: [id])
+  schemeId Int
+
+  @@index([gameId])
+  @@index([schemeId])
+}
+
+enum State {
+  ALIVE
+  RETIRED
+  DEAD
+  CAPTURED
+}
+
+enum ConsequenceState {
+  ON
+  OFF
+}
+
+// Campaign schema
+model CampaignConsequence {
+  id            Int              @id @default(autoincrement())
+  campaign      Campaign         @relation(fields: [campaignId], references: [id])
+  campaignId    Int
+  consequence   Consequence      @relation(fields: [consequenceId], references: [id])
+  consequenceId Int
+  state         ConsequenceState
+
+  @@index([campaignId])
+  @@index([consequenceId])
+}
+
+model Campaign {
+  id           Int                   @id @default(autoincrement())
+  Game         Game[]
+  freeVillains GameFreeVillain[]
+  freeAgents   GameFreeAgent[]
+  consequences CampaignConsequence[]
+  Scheme       Scheme?               @relation(fields: [schemeId], references: [id])
+  schemeId     Int?
+  Henchman     Henchman[]
+  Hero         Hero[]
+  Villain      Villain[]
+
+  @@index([schemeId])
+}

@@ -1,113 +1,206 @@
-import Image from 'next/image'
+"use client";
+
+import { useState } from "react";
+import heroes from "../../public/heroes.json";
+import masterminds from "../../public/masterminds.json";
+import schemes from "../../public/schemes.json";
+import freeVillains from "../../public/freeVillains.json";
+import freeHenchmen from "../../public/freeHenchmen.json";
 
 export default function Home() {
+  const [campaignState, setCampaignState] = useState(randomCampaign());
+  const [steps, setSteps] = useState(0);
+  const [numOfAgency, setNumOfAgency] = useState(1);
+  const [agencyHeros, setAgencyHeros] = useState({});
+  const [freeVillains, setFreeVillains] = useState([]);
+  const [freeHenchmen, setFreeHenchmen] = useState([]);
+
+  const handleAgencyInput = (e) => {
+    setNumOfAgency(e.target.value);
+
+    const agencyHeros = {};
+    for (let i = 0; i < parseInt(e.target.value); i++) {
+      agencyHeros[`Agency ${i + 1}`] = [];
+    }
+    setAgencyHeros(agencyHeros);
+  };
+
+  const generateHeroesForAgency = (agencyName) => () => {
+    const randomHero1 = heroes[Math.floor(Math.random() * heroes.length)];
+    const randomHero2 = heroes[Math.floor(Math.random() * heroes.length)];
+    const randomHero3 = heroes[Math.floor(Math.random() * heroes.length)];
+    const newAgencyHeroes = {
+      ...agencyHeros,
+      [agencyName]: [randomHero1, randomHero2, randomHero3],
+    };
+    setAgencyHeros(newAgencyHeroes);
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main>
+      {steps >= 0 && (
+        <>
+          <h1 className="text-2xl font-bold">Marvel Legendary Randomizer</h1>
+          <br />
+          <h1 className="font-bold">Main Hero</h1>
+          <h2>{campaignState.hero.name}</h2>
+          <br />
+          <h1 className="font-bold">Mastermind</h1>
+          <h2>{campaignState.mastermind.name}</h2>
+          <br />
+          <h1 className="font-bold">Scheme</h1>
+          <h2>{campaignState.scheme.name}</h2>
+          <div className="space-x-2">
+            <button
+              className="bg-blue-500 py-2 px-4"
+              onClick={() => setSteps(1)}
+            >
+              Next
+            </button>
+            <button
+              className="bg-blue-500 py-2 px-4"
+              onClick={() => setCampaignState(randomCampaign())}
+            >
+              Refresh
+            </button>
+          </div>
+        </>
+      )}
+      <div className="mt-4" />
+      {steps >= 1 && (
+        <>
+          <input type="number" onChange={handleAgencyInput} />
+          <h1>Number of agency: {numOfAgency}</h1>
+          <button className="bg-blue-500 py-2 px-4" onClick={() => setSteps(2)}>
+            Next
+          </button>
+        </>
+      )}
+      <div className="mt-4" />
+      {steps >= 2 && (
+        <>
+          <h1 className="font-bold">Agency heros</h1>
+          {Object.entries(agencyHeros).map(([key, value]) => {
+            return (
+              <>
+                <div key={key}>Agency Name: {key}</div>
+                <div>Heroes: {JSON.stringify(agencyHeros[key])}</div>
+                <button
+                  className="bg-blue-500 py-2 px-4"
+                  onClick={generateHeroesForAgency(key)}
+                >
+                  Click to generate randomized hero
+                </button>
+                <div className="mt-4" />
+              </>
+            );
+          })}
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          <button className="bg-blue-500 py-2 px-4" onClick={() => setSteps(3)}>
+            Next
+          </button>
+        </>
+      )}
+      <div className="mt-4" />
+      {steps >= 3 && (
+        <>
+          <h1 className="font-bold">Free villains</h1>
+          <div>{JSON.stringify(freeVillains)}</div>
+          <div className="space-x-2">
+            <button
+              className="bg-blue-500 py-2 px-4"
+              onClick={() => setFreeVillains([randomFreeVillains()])}
+            >
+              Click to generate randomized free villains
+            </button>
+            <button
+              className="bg-blue-500 py-2 px-4"
+              onClick={() => setSteps(4)}
+            >
+              Next
+            </button>
+          </div>
+        </>
+      )}
+      <div className="mt-4" />
+      {steps >= 4 && (
+        <>
+          <h1 className="font-bold">Free henchmen</h1>
+          <div>{JSON.stringify(freeHenchmen)}</div>
+          <div className="space-x-2">
+            <button
+              className="bg-blue-500 py-2 px-4"
+              onClick={() => setFreeHenchmen([randomHenchmen()])}
+            >
+              Click to generate randomized free henchmen
+            </button>
+            <button
+              className="bg-blue-500 py-2 px-4"
+              onClick={() => setSteps(5)}
+            >
+              Next
+            </button>
+          </div>
+        </>
+      )}
     </main>
-  )
+  );
 }
+
+function randomCampaign() {
+  return {
+    hero: randomHero(),
+    mastermind: randomMastermind(),
+    scheme: randomScheme(),
+  };
+}
+
+function randomHero() {
+  return heroes[Math.floor(Math.random() * heroes.length)];
+}
+function randomMastermind() {
+  return masterminds[Math.floor(Math.random() * masterminds.length)];
+}
+function randomScheme() {
+  return schemes[Math.floor(Math.random() * schemes.length)];
+}
+function randomFreeVillains() {
+  return freeVillains[Math.floor(Math.random() * freeVillains.length)];
+}
+function randomHenchmen() {
+  return freeHenchmen[Math.floor(Math.random() * freeHenchmen.length)];
+}
+
+const mockConsequence = [
+  {
+    id: 1,
+    name: "The new age is here.",
+    schemeId: 1,
+    effect: "Ongoing",
+    description:
+      'Before the beginning of the first turn, draw the top 5 cards in the hero deck and set it aside as the "Evolution" Pile. The Mastermind and Always Lead Villains is Empowered by each colour in the Evolution Pile.',
+  },
+  {
+    id: 2,
+    name: "Aliens swarmed the Earth.",
+    schemeId: 2,
+    effect: "Ongoing",
+    description:
+      "During setup, fill every city space with 2 Brood, indicating aliens are everywhere. Playing cards from the villain deck will not push the Brood forward. Villains are now their attack + the number of Broods below them. Heroes still can fight The Brood when there are no Villains on the top of The Broods, resolve the Fight effect accordingly.",
+  },
+  {
+    id: 3,
+    schemeId: 3,
+    name: "Society has been injected with Techno-Organic Virus.",
+    effect: "Ongoing",
+    description: "Wound and Binding cannot be KO'ed.",
+  },
+  {
+    id: 4,
+    name: "We have to stay low.",
+    schemeId: 4,
+    name: "Society has been injected with Techno-Organic Virus.",
+    effect: "Ongoing",
+    description: "Wound and Binding cannot be KO'ed.",
+  },
+];
