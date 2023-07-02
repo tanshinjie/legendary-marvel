@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Agency {
+  id         String @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  heroes     Json[]
+  campaignId String @db.ObjectId
+}
+
+model Game {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  agencies     Json[]
+  campaignId   String
+  consequence  Json?
+  endTime      DateTime
+  freeAgents   Json[]
+  freeVillains Json[]
+  henchmen     Json[]
+  mainHero     Json
+  mastermind   Json
+  outcome      Outcome
+  scheme       Json
+  startTime    DateTime
+}
+
+enum Outcome {
+  WIN
+  LOSE
+  DRAW
+}
+
+enum State {
+  ALIVE
+  RETIRED
+  DEAD
+  CAPTURED
+}
+
+model Campaign {
+  id           String @id @default(auto()) @map("_id") @db.ObjectId
+  freeVillains Json[]
+  freeAgents   Json[]
+  consequences Json[]
+  agencies     Json[]
+}

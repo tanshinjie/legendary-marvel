@@ -1,9 +1,14 @@
-import { prisma } from "../../core/prisma";
+import { prisma } from "../../../core/prisma";
 
 export async function GET(request) {
-  const agency = await prisma.agency.findMany();
-  console.log(agency);
-  return new Response(JSON.stringify({ message: "OK" }));
+  const { searchParams } = new URL(request.url);
+  const id = searchParams.get("campaignId");
+  const agencies = await prisma.agency.findMany({
+    where: {
+      campaignId: id,
+    },
+  });
+  return new Response(JSON.stringify(agencies));
 }
 
 export async function HEAD(request) {}
