@@ -1,6 +1,4 @@
-import { PrismaClient, ObjectId } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import { prisma } from "../../../core/prisma";
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
@@ -10,7 +8,6 @@ export async function GET(request) {
       id: id,
     },
   });
-  console.log("campaign", campaign);
   return new Response(JSON.stringify(campaign));
 }
 
@@ -25,7 +22,6 @@ export async function POST(request) {
   const agencies = body.agencies;
   const newAgencies = await Promise.all(
     agencies.map(async (agency) => {
-      console.log("agency", agency);
       const newAgency = await prisma.agency.create({
         data: {
           name: agency.name,
@@ -36,7 +32,6 @@ export async function POST(request) {
       return newAgency;
     })
   );
-  // TODO: error on prisma.updateOneCampaign. Provided List<Json>, expected AgencyUpdateManyWithoutCampaignNestedInput
   newCampaign = await prisma.campaign.update({
     where: {
       id: newCampaign.id,
@@ -58,7 +53,26 @@ export async function PUT(request) {}
 
 export async function DELETE(request) {}
 
-export async function PATCH(request) {}
+export async function PATCH(request) {
+  const body = await request.json();
+  let campaign = await prisma.campaign.update({
+    where: {
+      id: body.id,
+    },
+    data: {
+      consequences: {
+        push: body.consequence,
+      },
+    },
+  });
+
+  return new Response(
+    JSON.stringify({
+      message: "Campaign updated.",
+      campaign,
+    })
+  );
+}
 
 // If `OPTIONS` is not defined, Next.js will automatically implement `OPTIONS` and  set the appropriate Response `Allow` header depending on the other methods defined in the route handler.
 export async function OPTIONS(request) {}

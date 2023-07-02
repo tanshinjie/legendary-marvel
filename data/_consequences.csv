@@ -1,0 +1,515 @@
+No.,Schemes,Consequences,Effect
+1,Legacy Virus,"The heroes are contaminated.
+
+All heroes cannot heal.",Ongoing
+2,Midtown Bank Robbery,"Local News: Super Hero Embarassment, Can't even stop the simplest crime.
+
+Each Agency have to release 4 Heroes into free agent.",One-off
+3,Negative Zone Prison Breakout,"Freedom, and revenge!
+
+Randomly free 10 masterminds from the PRISON.",One-off
+4,Portals to the Dark Dimension,"The Dark Portal Remains.
+
+During setup, the number of twists must be at least 6. After resolving the twist, the twist become a Dark Portal.
+Twist 1: Put the Dark Portal above the Mastermind, the Mastermind +2.
+Twist 2 - 6: Put the Dark Portal in the leftmost city space that doesn't yet have a Dark Portal. Villains in that city space get +2.",Ongoing
+5,Replace Earth's Leaders with Killbots,"Preparation for the purge.
+
+Villains entering the cities capture number of bystanders equal to its VP.",Ongoing
+6,Secret Invasion of the Skrull Shapeshifters,"There are still shapeshifters hidden out there.
+
+During setup, draw 6 hero cards from the hero deck and shuffle them into the villain deck. They are Skrull Villains with Attack equal to the Hero's Cost +2 and: ""Ambush: Play another card from the Villain Deck."" and ""Fight: gain that hero.""",Ongoing
+7,Super Hero Civil War,"""I've got no trust, liar.""
+
+Heroes involve permanently marked <Betrayal>. Heroes with <Betrayal> become unaffiliated and will never be in the same match with the same team or other <Betrayal>-marked Hero.",Ongoing
+8,Unleash the Power of the Cosmic Cube,"Portals formed in the cities.
+
+Villains with Escape ability will be teleported to the Bridge when played, pushing any villain there away.
+Note: If the consequence of Unleash the Power of the Cosmic Cube (Marvel Studios Phase 1) is in play, Escape ability will be activated twice.",Ongoing
+9,Capture Baby Hope,"Hope was lost.
+
+The effect of consequence need to last at least 3 rounds before it become available for Fixing the World, including this Consequence.",Ongoing
+10,Detonate the Helicarrier,"*Mayday* Damages reported on the Helicarrier.
+
+Close 2 spaces in the HQ.",Ongoing
+11,Massive Earthquake Generator,"Shockwave travel across the globe.
+
+Each player reveal the top card of their deck after a Twist is played. If it is a strength hero, the hero could choose to draw the card or put it back to the deck, or else, KO the card.",Ongoing
+12,Organized Crime Wave,"The streets are no longer safe.
+
+During setup, add 2 extra villain groups into the villain deck. Play 2 cards from the villain deck every turn.",Ongoing
+13,Save Humanity,"Humanity have been doomed.
+
+Bystander deck only has 30 cards in total. During setup (before building the villain deck), shuffle 10 wounds in the bystander stack; they are special bystander with: rescue: add it to your deck.",Ongoing
+14,Steal the Weaponized Plutonium,"Plutonium Weapons spread like wildfire in the villains community.
+
+All villains + 3 attack. Mastermind + 4 attack.",Ongoing
+15,Transform Citizens into Demons,"Humans transformed into Demons
+
+During set up, add 10 addtional bystanders into villain decks. Anytime a bystander is drawn from the villain deck, play another card from the villain deck. They entered the city as demon goblins with 2 attack. Players could fight the them and rescue them.
+Note: If the consequence of Splice Humans with Spider DNA is in play, the villains are Spider-Infected Demon Goblins with 5 attack with ""Fight: The next Hero you gain this turn has Wall-Crawl"".",Ongoing
+16,X-Cutioner's Song,"Heroes captured as hostages.
+
+Villain Deck includes 14 cards for an extra Hero. Whenever you play a Hero from the Villain Deck, that Hero is captured by the closest enemy to the Villain Deck and play another card from the villain deck. Each Villain gets +2 Attack for each Hero it has. When you fight an enemy, gain all the Heroes captured by that enemy.",Ongoing
+17,Bathe the Earth in Cosmic Rays,"Radiating villains.
+
+During setup, place this scheme in the escape pile. For every villains entering the escape pile, KO a non-grey hero from your hand. Choose a hero from the HQ with the same or lower cost and put it into your hand.",Ongoing
+18,Flood the Planet with Melted Glaciers,"Most of the earth is under the water.
+
+Temporarily close Sewer and the Bridge. The city only has the Bank, the Rooftops and the Streets as the city spaces.",Ongoing
+19,Invincible Force Field,"Protection yielded.
+
+During setup, place this scheme on top of the mastermind. Before fighting the mastermind, Invincible Force Field need to be destroyed first, with 7 attack and 7 recruit points (Piercing energy still can take effect, ignoring the Invincible Force Field).",Ongoing
+20,Pull Reality into the Negative Zone,"The world became inverted.
+
+Enemies cost Recruit to fight and Heroes cost Attack to recruit.",Ongoing
+21,Clone Saga,"Public does not trust superheroes.
+
+Each agencies suffer fame lost equals to the number of Heroes enlisted times 2.",One-off
+22,Invade the Daily Bugle News HQ,"The media spread fake news about the heroes.
+
+Fame earned in the following game is halved.",Ongoing
+23,Splice Humans with Spider DNA,"Humans transformed into Spideys.
+
+During set up, add 10 bystanders into villain decks. Anytime a bystander is drawn from the villain deck, play another card from the villain deck. They entered the city as Spider-Infected with 3 attack and ""Fight: The next Hero you gain this turn has Wall-Crawl"". Players could fight the them and rescue them.
+Note: If the consequence of Splice Humans with Spider DNA is in play, the villains are Spider-Infected Demon Goblins with 5 attack with ""Fight: The next Hero you gain this turn has Wall-Crawl"".",Ongoing
+24,Weave a Web of Lies,"Persuasion needed.
+
+You must have at least 6 bystanders in your Victory Pile to fight the mastermind.",Ongoing
+25,Build An Underground Mega-Vault Prison/ Build An Underground Mega-Vault Prison,"Imprisoned and tortured.
+
+At the end of each game, each player has to send 1 hero from agency to the prison. The prison can only hold 8 heroes maximum (applies to other consequences). Any additional heroes are KO'ed from the campaign.",Ongoing
+26,Cage Villains in Power-Suppressing Cells/ Cage Heroes in Power-Suppressing Cells,"Heroes are held in captivity.
+
+2 heroes per player are being captured in the prison (Heroes must be from agency). Heroes captured cannot be used, heal, retired or KO in matches when this consequence is in play. Add 1 Binding into each player starting hand.",Ongoing
+27,Crown Thor King of Asgard/ Drives Thor Away,"Heroes' abilities are stripped away.
+
+Remove each hero's unique rare card from the Hero Deck during setup.",Ongoing
+28,Crush Hydra/ Crush S.H.I.E.L.D.,"Hail Hydra.
+
+Replace the S.H.I.E.L.D. starter cards with Hydra Allies. Anytime a Twist is drawn from the villain deck, players that have hydra in their hands discard 3 cards and draw 2 cards.",Ongoing
+29,Graduation at Xavier's X-Academy/ Kidnapping Young Mutants from Xavier's X-Academy,"Intruders!! Graduation interrupted.
+
+In the following matches, only 1 free agent from the Hero Pile could be used during setup (as the Main Hero). Agencies have to use enlisted heroes only.",Ongoing
+30,Infiltrate the Lair with Spies/ Infiltrate HQ with Spies,"Lair/ HQ is compromised.
+
+Add 1 villain group into the Hero Deck. You can fight Villains in the HQ.",Ongoing
+31,Mass Produce War Machine Armour/ Hijack War Machine Armour,"War Machine Armour are being hijacked.
+
+During setup, put 1 extra group of Henchmen beside the Mastermind as War Machine Armour. Players can fight those Henchmen. Mastermind attack is doubled when there are still War Machine Armour beside the Mastermind.",Ongoing
+32,Resurrect Heroes with the Norn Stones/ Resurrect Villains with the Norn Stones,"Resurrected heroes fight with villains.
+
+During setup, randomly select a hero from the Graveyard and shuffle the hero cards into the Villain Deck. These heroes are brainwashed and become villains with Attack equal to the Hero's Cost with Ambush: Play another card from the Villain Deck. After fighting, gain it as a 1VP villain in your Victory Pile.",Ongoing
+33,Forge the Infinity Gauntlet,"""Fine. I'll do it myself.""
+
+During setup, shuffle a random infinity gems villain card into the villain deck. When the infinity gem escaped the city, add 6 shards to the Mastermind.",Ongoing
+34,Intergalactic Kree Nega-Bomb,"The bomb is detonated.
+
+Close a space in HQ. Add 1 wound to each players starting deck.",Ongoing
+35,Kree-Skrull War,"Persecution by Alien Activities Commission.
+
+All heroes in the agency lose their affiliation. Mark all heroes in the agency with <Unaffiliated>.",Ongoing
+36,Unite the Shards,"Power concentrated in celestial remnants.
+
+Villains entering the cities gain shards equal to the VP. If any villain escape with shards, the mastermind gains 1 of the shards.",Ongoing
+37,Fear Itself/ Sabotaging National Security Level,"Fear dominated the heart of the citizens.
+
+You will need at least 10VP worth of villains in your Victory Pile to fight the Mastermind.",Ongoing
+38,Last Stand at Avengers Tower/ Reclaim Avengers Tower Back from the Villains,"Protected by Avengers Tower Defense.
+
+Villains in the Rooftops + 6 attack.",Ongoing
+39,Traitor,"Traitor or not, loser should be punished.
+
+The winner(s) choose one of the following for each loser: KO 1 hero from their agency; or retire 2 heroes from their agency; or release 3 heroes as Free Agents; or enlist up to 2 heroes from their agencies into the winner(s)' agency.",One-off
+40,Build An Army of Annihilation,"Annihilation Day arrived.
+
+During setup, put 1 extra group of Henchmen beside the Mastermind as the Annihilation Wave. Players can fight those Henchmen. After taking the effect of a twist, KO heroes in the HQ equal to the number of Annihilation Wave Henchmen.",Ongoing
+41,Corrupt the Next Generation of Heroes,"Sidekicks have been corrupted.
+
+During setup, shuffle 10 sidekicks into the villain deck. They are villain that, when revealed, enter the city. They have ATTACK equal to the KO'ed sidekicks and: Ambush: KO 2 Sidekicks from the stack, Fight: shuffle it in the Sidekick stack and rescue 3 bystander. Escape: KO 2 Sidekicks from the stack.",Ongoing
+42,Crush Them with My Bare Hands,"Nobody Could Stop Me!!!!!
+
+Masterstrike will take effect twice.",Ongoing
+43,Dark Alliance,"Villains forming alliance.
+
+Add an extra mastermind during setup.",Ongoing
+44,Fragmented Realities,"Realities are shattered.
+
+Randomly shuffle 5 used schemes back to the Scheme Pile.",One-off
+45,Master of Tyrants,"Tyrant overrule the societies.
+
+During setup, shuffle 3 Ambition Cards into the Mastermind Tactic as extra Tactics. Do its Ambition effect as the Mastermind fight effect.",Ongoing
+46,Pan-Dimensional Plague,"Pandemic.
+
+Heroes involved in a game (including current and future game) are <Infected>. <Infected> heroes lose 1 HP at the end of each game.",Ongoing
+47,Smash Two Dimensions Together,"Dimensions Intertwined.
+
+Before Twist is resolved after drawn, each player pass all their non-grey Hero cards in hand to the player on their right.
+Note: Solo mode: player has to swap all non-grey Hero cards with the Hero deck.",Ongoing
+48,Deadlands Hordes Charge the Wall,"For the Horde!!
+
+All villains charge 1 space when a Strike or Twist is played.",Ongoing
+49,Enthrone the Barons of Battleworld,"Rise through the rank.
+
+All villains have the ability of ""Escape: Each Player discards a card with cost equal to this villain's printed VP"".",Ongoing
+50,Fountain of Eternal Life,"Long live the King.
+
+All Villains and Mastermind Tactics have ""Fight: Fateful Resurrection.""",Ongoing
+51,God-Emperor of Battleworld,"God-Emperor of Battleworld lurks in the overworld.
+
+During setup, add this scheme as God-Emperor of Battleworld Mastermind with 19 attack. It has ""Masterstrike: Each player with exactly six cards in hand reveals a Tech Hero or puts two cards from their hand on top of their deck.""",Ongoing
+52,Mark of Khonshu,"The power of Khonshu yielded by villains.
+
+While in the Sewers, Rooftops, or Bridge, all villains are in ""wolf form"" and have double their Attack.",Ongoing
+53,Master the Mysteries of Kung-Fu,"Master of Kung Fu.
+
+Masterminds and Villains has Circle of Kung Fu matching its VP.",Ongoing
+54,Secret Wars,"""They tried as hard as they could. Just like anybody would. It just wasn’t enough.""
+
+During Setup, draw another 3 Mastermind with 1 tactic each. 
+Note: If Final Blow mode is played, only apply Final Blow to the final Mastermind.",Ongoing
+55,Sinister Ambitions,"The masterminds in the world become very ambitious.
+
+During setup, shuffle 10 ambition cards into the villain deck. After resolving the ambition cards, play the next villain card.",Ongoing
+56,Brainwash the Military,"The military turns into a cult center.
+
+S.H.I.E.L.D. Officer and Madame Hydra cost 3 recruit points and 3 attack points to recruit. Sidekicks and New Recruits cost 2 recruit points and 2 attack points to recruit.",Ongoing
+57,Change the Outcome of WWII,"The World is ruled by tyrant.
+
+Each player's hand size is 1 card less.",Ongoing
+58,Go Back In Time to Slay Heroes' Ancestors,"Some heroes never appeared.
+
+KO 5 heroes from the same affiliate with the Main hero. Choose following this order: Agency, Free Agent, Hero Pile. If the hero has no Icon consider it as any icon.",One-off
+59,Unbreakable Enigma Code,"Informant network crumbled.
+
+During setup, each agency will have to pick their heroes before drawing Masterminds, Schemes, Main Heroes and/ or Free Agent.
+Note: If the consequence of Silence the Witnesses in play, in addition to the setup rule above, each agency must pick their heroes randomly.",Ongoing
+60,Avengers VS. X-Men,"We are friends no more.
+
+To play heroes from seperate teams in the same turn, the player need to discard a card for every 2 cards played.",Ongoing
+61,Dark Reign of H.A.M.M.E.R. Officers,"H.A.M.M.E.R. takes over the operation.
+
+The number of Free Agents reduce to 5.",Ongoing
+62,Epic Super Hero Civil War,"""I've got no trust, liar.""
+
+Heroes involve permanently marked <Betrayal>. Heroes with <Betrayal> become unaffiliated and will never be in the same match with the same team or other <Betrayal>-marked Hero.",Ongoing
+63,Imprison Unregistered Superhumans,"Imprisoned.
+
+4 heroes per player are being captured in the prison (Heroes must be from agency). Heroes captured cannot be used, heal, retired or KO in matches when this consequence is in play. Agency will lose 1 Fame for each heroes captured at the end of each consecutive round.",Ongoing
+64,Nitro the Supervillain Threatens Crowds,"Life for a life.
+
+Whenever a bystander is carried away by Villains or KO'd, each player must KO a non-Grey card from their hand.",Ongoing
+65,Predict Future Crime,"See the future.
+
+During Setup, draw 3 cards from the Mastermind Pile, and pick the highest attack Mastermind as the Main Mastermind for the match.",Ongoing
+66,Reveal Heroes' Secret Identities,"Heroes' peaceful life disrupted.
+
+Heroes could not be used consecutively and are force to stay out of action for 3 matches after being used in a match. Any hero violate this consequence will be played for the final game and release into Free Agent.",Ongoing
+67,United States Split by Civil War,"In War... Not everyone is a soldier.
+
+In addition to the heroes used during setup, each agency must allocate another hero for Stakeout. Heroes assigned for Stakeout cannot rest and subject to Stamina Overworked (if the heroes had been used for multiple matches, suffer health loss as being used in consecutive matches).",Ongoing
+68,Deadpool Kills the Marvel Universe,"""I can save us from this endless continuity.""
+
+Heroes, mastermind and villains involved in the match are KO'ed.",One-off
+69,Deadpool Wants A Chimichanga,"Chimichanga rules!
+
+Heroes cannot heal through resting. Agencies must pay 5 Fame to buy Chimichanga for heroes to heal. Chimichanga can heal 1 hero for 5 HP, or 2 HP each for 3 heroes.",Ongoing
+70,Deadpool Writes A Scheme,"""Now the consequence. This is way more fun than I thought.""
+
+All agencies deduct 5 fame. If any Mercs for Money Hero or Deadpool is in your agency, enlist a free agent for free; if not, KO a hero from your agency.",One-off
+71,Everybody Hates Deadpool,"Endless Hatred.
+
+Whenever you complete a Twist, also play the Mastermind's masterstrike ability.",Ongoing
+72,Find the Split Personality Killer,"Accused the wrong suspect.
+
+KO the wrong suspect (s). Then, each agency who does not guess the correct suspect lost 5 Fame.",One-off
+73,Five Families of Crime,"The cities are dominated by families of crime.
+
+All Villains have Revenge for their own Villain Groups. (If they already have Revenge, double it.)",Ongoing
+74,Hidden Heart of Darkness,"The Darkness Ascend.
+
+Mastermind are turned to their epic side (if any).",Ongoing
+75,Silence the Witnesses,"Informant network crumbled.
+
+During setup, each agency will have to pick their heroes before drawing Masterminds, Schemes, Main Heroes and/ or Free Agent.
+Note: If the consequence of Unbreakable Enigma Code in play, in addition to the setup rule above, each agency must pick their heroes randomly.",Ongoing
+76,Alien Brood Encounters,"Aliens swarmed the Earth.
+
+During setup, fill every city space with 2 Brood, indicating aliens are everywhere. Playing cards from the villain deck will not push the Brood forward. Villains are now their attack + the number of Broods below them. Heroes still can fight The Brood when there are no Villains on the top of The Broods, resolve the Fight effect accordingly.",Ongoing
+77,Anti-Mutant Hatred,"We have to stay low.
+
+X-men hero couldn't be used until this consequence is being cancelled. Then reveal the top 10 cards of the independent hero deck, any X-men heroes revealed are place to the bottom of the independent hero deck. Put the rest back randomly.",Ongoing
+78,Dark Phoenix Saga,"Phoenix Force consumed the heroes.
+
+At the beginning of each game, reveal the top card of the hero deck, then KO all cards in the hero deck with the same class.",Ongoing
+79,Horror of Horrors,"The world is a darker place.
+
+At the beginning of each game: play 2 horror cards.",Ongoing
+80,Mutant-Hunting Super Sentinels,"Heroes are wounded.
+
+Add 2 wounds to the player starting deck.",Ongoing
+81,Nuclear Armageddon,"Earth is under the effect of a fallout.
+
+When fighting a villain in the Rooftops, Streets and Bridge, reveal a strength or ranged hero, if not, gain a wound.",Ongoing
+82,Televised Deathtraps of Mojoworld,"Heroes are tortured and televised for entertainment in the Mojoworld.
+
+During fame calculation, fame lost is doubled.",Ongoing
+83,X-Men Danger Room Goes Berserk,"Neurotoxin is released into open air.
+
+All heroes (including Free Agent) lose 2 HP.",One-off
+84,Distract the Hero,"Villainous Interruption.
+
+VP earn is reduced by 10 (VP deduction remained unchanged).",Ongoing
+85,Explosion at the Washington Monument,"Society blames heroes incompetence.
+
+All agencies lose a combined Fame of 10.",One-off
+86,Ferry Disaster,"""I can't protect em all...""
+
+Each agency lose 2 Fame.",One-off
+87,Scavenge Alien Weaponry,"Alien weaponry technology was stolen and synthesized.
+
+All henchmen villain has Striker.",Ongoing
+88,Clash of the Monsters Unleashed,"Monster released into the world.
+
+After resolving the mastermind tactic, each player randomly draws a villain card from their victory pile and enter the city.",Ongoing
+89,Divide and Conquer,"Heroes are in the state of disunity.
+
+Any hero share the same class with the hero under the Sewer cannot be recruited (Player may still recruit the hero in the Sewer).",Ongoing
+90,Hypnotize Every Human,"Civilians willingly guard the villains.
+
+Whenever villains entering the cities capture 2 human shields.",Ongoing
+91,Steal All Oxygen on Earth,"Humans population reach its minimum.
+
+During setup, do not shuffle bystanders into the villain deck.",Ongoing
+92,Break the Planet Asunder,"The planet is torn apart.
+
+During HP calculation phase, total up the number of wounds in the hand, player's deck and discard pile. Decrease 1 HP for every 2 wounds (can be shared among heroes involved in the game).",Ongoing
+93,Cytoplasm Spike Invasion,"The heroes are showered by Spike.
+
+The maximum HP for all heroes are now 4.",Ongoing
+94,Fall of the Hulks,"""Hulk…Fail...""
+
+Any time a twist or strike played from the villain deck, Cross Dimensional Hulk Rampage.",Ongoing
+95,Gladiator Pits of Sakaar,"Gladiator pride, a fight to the death.
+
+Anytime a Twist is played from the villain deck, each player can only play cards from a single Team of their choice during their turn.",Ongoing
+96,Mutating Gamma Rays,"Heroes are mutating.
+
+Whenever the player shuffle their discard pile, after drawing 6 cards to their hand, reveal the top card of the hero deck. Then, KO all the cards in hand sharing the same cost with the revealed card and put it into hand. If there is no card in hand with the same cost, KO the card revealed instead.",Ongoing
+97,Shoot Hulk Into Space,"He will be back.
+
+All Free Agents are shuffle back to the bottom of the Hero Pile.",One-off
+98,Subjugate with Obedience Disks,"Heroes are all forced to disobey orders.
+
+All heroes cost the number of Strike played more to recruit.
+Note: If the consequence of Enslave Minds with the Chitauri Scepter is in play, all heroes cost twice the number of Strike played more to recruit.",Ongoing
+99,World War Hulk,"Pain could have been averted.
+
+Undefeated Mastermind (mastermind failed to be captured in prison) will enter the following game as additional Mastermind.",Ongoing
+100,Asgard Under Siege,"Bifrost is destroyed.
+
+All villains activate their escape abilities when they are played from the villain deck.",Ongoing
+101,Destroy the Cities on Earth!,"The cities are leveled.
+
+Ruined Cities replace Bank and Rooftops. When you fight a villain in Ruined Cities, you need to KO a bystander from your victory pile or gain a Wound.",Ongoing
+102,Enslave Minds with the Chitauri Scepter,"In the end, you will always kneel.
+
+All heroes cost the number of Strike played more to recruit.
+Note: If the consequence of Subjugate with Obedience Disks is in play, all heroes cost twice the number of Strike played more to recruit.",Ongoing
+103,Invade Asgard,"Magical power provokes villainous behaviour.
+
+After the Strike or Twist is drawn from the villain deck, activate all villains Ambush abilities.",Ongoing
+104,Radioactive Palladium Poisoning,"The heroes are poisoned.
+
+All heroes involved in the match lose 3 HP each.",One-off
+105,Replace Earth's Leaders with Hydra,"Hydra controls the world politics.
+
+Cost to enlist heroes require 2 additional Fame.",Ongoing
+106,Super Hero Civil War,"""I've got no trust, liar.""
+
+Heroes involve permanently marked <Betrayal>. Heroes with <Betrayal> become unaffiliated and will never be in the same match with the same team or other <Betrayal>-marked Hero.",Ongoing
+107,Unleash the Power of the Cosmic Cube,"Portals formed in the cities.
+
+Villains with Escape ability will be teleported to the Bridge when played, pushing any villain there away.
+Note: If the consequence of Unleash the Power of the Cosmic Cube (Core) is in play, Escape ability will be activated twice.",Ongoing
+108,Age of Ultron,"The new age is here.
+
+Before the beginning of the first turn, draw the top 5 cards in the hero deck and set it aside as the ""Evolution"" Pile. The Mastermind and Always Lead Villains is Empowered by each colour in the Evolution Pile.",Ongoing
+109,Pull Earth into Medieval Times,"Disorder in the Space Time Conundrum.
+
+The Main Hero in the following match is also considered a Forerunner. When a Forerunner is drawn from the hero deck, check the number of Forerunners in the HQ. If the Forerunners is more than half the spaces available, KO all other heroes and shuffle the Forerunners to the bottom of the Hero Deck.",Ongoing
+110,Transform Commuters into Giant Ants,"Transportation disrupted.
+
+During setup, place 1 bystander facedown on the Mastermind and 5 more bystanders facedown on each city space. These face down bystanders are Giant Ant Villains with 2 attacks. You must fight the Giant Ant villains to advance through the city spaces. For e.g. to fight a Villain in the Sewer, you must already fight the first Giant Ant; to fight a villain in the Streets, you must already fight 4 Giant Ants; the 6th Giant Ant gain you the access to fight the Mastermind. After fighting Giant Ant, you may rescue it as bystander.",Ongoing
+111,Trap Heroes in the Microverse,"We're lost in the quantum realm.
+
+Heroes involved in the match are all shuffled back to the Hero Pile.",Ongoing
+112,Invasion of the Venom Symbiotes,"Symbiosis emerged.
+
+After the twists take effects, it enter the cities as a 3 Attack ""Symbiote"" Villain worth 3VP with ""Ambush: This Symbiote Bonds with another Villain in the city. Play another card from the Villain Deck.""",Ongoing
+113,Maximum Carnage,"Carnage feasts in the cities of Earth.
+
+All villains has Feast.",Ongoing
+114,Paralyzing Venom,"Venom is captured.
+
+Add 2 Binding into starting hand.",Ongoing
+115,Symbiotic Absorption,"The absorption is complete.
+
+Shuffle the previous match mastermind tactics with the current match mastermind tactic and place it under the main mastermind.",Ongoing
+116,"Earthquake Drains the Ocean, Tsunami Crushes the Coast","Tsunami flooded the cities.
+
+Villains in the cities will need 1 extra attack to fight for each cities space they advanced, starting from Sewer, or gain a wound when fighting each villain (Mastermind will need extra 5 spaces by default).",Ongoing
+117,"House of M, No More Mutants","No more mutants.
+
+All x-men heroes in each agency and free agent space are KO'd. If an X-Men hero were revealed from the Hero Pile, KO it straightaway.",Ongoing
+118,"Korvac Saga, Korvac Revealed","Korvac lurking.
+
+During setup, add this scheme to represent Korvac as a 19 attack point mastermind with the following ability: ""To fight Korvac, each player must discard down to four cards or KO a Bystander from their Victory Pile"" and ""Masterstrike: Each player discard an Avenger Hero or gains a Wound.""",Ongoing
+119,"Secret HYDRA Corruption, Open Hydra Revolution","Heroes sympathizes with the villains.
+
+You need to pay 2 recruit points to fight the villain in addition to the attack points.",Ongoing
+120,Hail Hydra,"S.H.I.E.L.D. collapsed.
+
+Agency are unable to enlist new hero while this consequence is in play.",Ongoing
+121,Hydra Helicarriers Hunt Heroes,"Strike Incoming!!
+
+After taking the effect of Strike, KO all Heroes in the HQ.",Ongoing
+122,S.H.I.E.L.D. vs. Hydra War,"Which side is better? We may never know.
+
+Players could choose to spend 1 recruit to send their non-grey hero undercover. All escaped villains contribute to the Hydra Level based on their printed VP. Player's hand is 1 card less for each Hydra Level higher than the S.H.I.E.L.D. Level.",Ongoing
+123,Secret Empire of Betrayal,"So there we were — ready for the darkness.
+
+In the following match, each Main Hero in the match will be Brainwashed Dark Loyalty Hero. After taking the effect of Strike, all players reveal their hand, any player with the Dark Loyalty Hero in their hand gains a wound.",Ongoing
+124,Asgardian Test of Worth,"Heroes are not worthy.
+
+Each player must test for Worthy at the start of their turn. If the player is not Worthy, the player must discard the number of cards equal to the number of Strike played.",Ongoing
+125,Dark World of Svartalfheim,"The world engulfed in darkness.
+
+During setup, place a wound card face down on each city space and HQ space, as ""Eternal Darkness"". Villains in city spaces with Eternal Darkness get +1 Attack. To recruit a Hero in an HQ space with Eternal Darkness, you must pay an extra 1 Recruit. During your turn, you may spend 1 attack on city space or 1 recruit on HQ space to lighten up the space, KO the wound on that space.",Ongoing
+126,"Ragnarok, Twilight of the Gods","Distrubance in the Nine Realms.
+
+During setup, randomly draw a used scheme from the box. Activate the consequence.",Ongoing
+127,War of the Frost Giants,"Trampled by Frost Giants and frosted.
+
+Every single KO'ed card decrease 1 HP.",Ongoing
+128,Crash the Moon into the Sun,"We lost the moon.
+
+When resolving any Moonlight card effect on any cards, resolve the following effect instead: All players discard a hero card from their hand.",Ongoing
+129,Demon Bear Saga,"Interrupted sleep, nightmare awaits.
+
+Heroes cannot be played for more than 1 match consecutively. Any hero violating this consequence loses 1 HP.",Ongoing
+130,Superhuman Baseball Game,"We lost the World Championship.
+
+All agencies must lose a pool of 15 Fame. If the Fame is not sufficient, each agency retired 2 of their heroes instead.",One-off
+131,Trapped in the Insane Asylum,"No great mind has ever existed without a touch of madness.
+
+Player must play two randomly-selected cards from their hand at the beginning of their turn.",Ongoing
+132,Annihilation: Conquest,"Society has been injected with Techno-Organic Virus.
+
+Wound and Binding cannot be KO'ed.",Ongoing
+133,Contest of Champions,"They are unamused.
+
+At the beginning of each game, revealed the top card of the hero deck. All cards share the same colour with the card revealed are colourless (no class).",Ongoing
+134,Destroy the Nova Corps,"Distrubance in the galaxies.
+
+Whenever a hero from the HQ need to be KO'ed, shuffle the heroes in the HQ and randomly KO one of them, put the rest back to the HQ in random order.",Ongoing
+135,Turn the Soul of Adam Warlock,"Soul corrupted with power.
+
+After a Strike is played, each player has to shuffle a tactic from the victory pile back to the stack.",Ongoing
+136,Devolve with Xerogen Crystals,"Humans turn into Alpha Primitives.
+
+During setup, add 5 additonal bystanders in the villain deck. Villains and Mastermind with any bystander have Highest Abomination. If the Villains or Mastermind already had Abomination, Double Abomination instead.",Ongoing
+137,Ruin the Perfect Wedding,"Bad omen falls upon the heroes.
+
+Anytime any player attempts to figh the mastermind, all other players discard 1 card from their hand.
+Note: Solo mode: To fight the mastermind, you have to discard 2 cards before fighting the mastermind.",Ongoing
+138,Tornado of Terrigen Mists,"Terrigen Mists block the view.
+
+During setup, each player puts a small object above the sewers to represent themself. You can't fight Villains outside the city space where you are. (You can still recruit from all HQ spaces and fight the Mastermind.) During your turn, you can spend 1 Attack any number of times to move yourself one space left or right.",Ongoing
+139,War of Kings,"Enemy units stormed through our line of defenses.
+
+Whenever a villain escape from the city, KO 2 heroes from the HQ instead of 1.",Ongoing
+140,Breach Parallel Dimensions,"Dimensions scattered.
+
+During setup, put the Villain Deck on the Bank space. The Sewers and Bank do not exist, so the city is only 3 spaces. ",Ongoing
+141,Pulse Waves from the Negative Zone,"Inverted world sense.
+
+All printed VP earned in a game becomes negative.",Ongoing
+142,Put Humanity on Trial,"Judgement from the Gods.
+
+Bystander does not grant any VP.",Ongoing
+143,Sneak Attack the Heroes' Homes,"Heroes rush back to save their loved ones.
+
+Player's turn will end when they need to shuffle their discard pile to form their deck.",Ongoing
+144,…Control the Mutant Messiah ☆,"A whole team vanishes from existence.
+
+Total up the number of heroes for each affiliation from each players' agencies and Free Agents. KO all heroes in the affiliation with the most heroes, break ties at random.",One-off
+145,…Open Rifts to Future Timelines ☆,"Doom from the future.
+
+Discard the next scheme and activate its consequence. Players may still attempt to Fixing the World for the activated Active Consequence.",One-off
+146,…Reveal the Heroes' Evil Clones ☆,"Can we trust the heroes?
+
+During each player's turn, if player plays any hero card that share the same card name from the HQ, KO the hero card in the HQ.",Ongoing
+147,…Unleash an Anti-Mutant Bioweapon ☆,"Heroes shielded the attack.
+
+KO'ed wound will be passed to the next player.",Ongoing
+148,Claim Souls for Demons,"Tormented souls cursed the heroes.
+
+When rescuing a bystander, player must make a Demonic Bargain. If that Bargain wounds that player, stack that Bystander next to the Mastermind as a “Tormented Soul” instead. Mastermind will get +1 attack for each ""Tormented Soul"".",Ongoing
+149,Cursed Pages of the Darkhold Tome,"Mastermind infused power from Darkhold Tome and summoned Chthon.
+
+After defeating the Mastermind's tactics (and final blow), player must fight the Chthon with 27 attack to win the game.",Ongoing
+150,Duels of Science and Magic,"Incompetent scientist and magic user.
+
+Tech and Range hero cards cannot be played together with Instinct and Covert hero cards.",Ongoing
+151,War for the Dream Dimension,"Rifts of the war scourge the living world.
+
+All villains enter the Astral Plane when fought in the city.",Ongoing
+152,"Inescapable ""Kyln"" Space Prison","Heroes are sent to Space Prison.
+
+At the end of each game, at least 1 free agent must be sent to the prison, or else, all players must KO 1 hero from each agency.",Ongoing
+153,Provoke the Sovereign War Fleet,"The Sovereign will strike back.
+
+Whenever player spends or burns any shard during their turn, declare the number of shards used. After that, roll a D6, if it's 2-3, the attack failed and discard the shards declared; if it's 1, the shards are captured by the Mastermind.",Ongoing
+154,Star-Lord's Awesome Mix Tape,"The heroes are distracted by the dance-off.
+
+All agencies swap their fame randomly.",One-off
+155,Unleash the Abilisk Space Monster,"The Abilisk escaped through the dimension.
+
+During setup, shuffle this scheme into the villain deck. When this scheme is played, every player must choose a non-grey hero from their discard pile. Shuffle these heroes into a face-down ""Captured Heroes"" deck. Each player may choose to spend 5 attack to fight the Abilisk. It has ""Fight: KO one of your grey Heroes."" A player of your choice gains the top captured Hero.""",Ongoing
+156,Plunder Wakanda's Vibranium,"Vibranium tech protects the Mastermind.
+
+The mastermind must be wounded at least once before being attacked. Player must spend half the printed attack on the Mastermind (rounded up) to wound the Mastermind.",Ongoing
+157,Poison Lakes with Nanite Microbots,"Microbots affect heroes' judgement.
+
+Players need to spend more attack equals to the number of wound in hand to fight the Mastermind.",Ongoing
+158,Provoke Clash of Nations,"Refugees crisis emerged.
+
+Whenever a card effect requires a player to rescue a bystander, the player must spend 1 recruit to rescue the bystander. If the player is unable to spend the recruit needed, his turn ends immediately.",Ongoing
+159,Seize the Wakandan Throne,"Wakanda declares war against the world.
+
+At the start of the game, the Mastermind gains the Throne's Favor. Player may fight the Mastermind to gains the Throne's Favor. When a Master Strike is played, the Mastermind gains the Throne's Favor; if the Mastermind already has the Throne's Favor, all players KO 1 non-grey heroes from their hand and gains a wound.",Ongoing
+160,Corrupt the Spy Agencies,"Spies leaked classified information about heroes.
+
+The player will have to pay 1 Fame for each hero chosen from the agency for future matches.",Ongoing
+161,Frame Heroes For Murder,"Heroes are under constant surveillance.
+
+During setup, add 1 bystander to each player's deck. Player must fight a villain during the turn to rescue the bystander from their hand.",Ongoing
+162,Sniper Rifle Assassins,"Hero was headshot from action.
+
+If the unique rare card of the hero is KO'ed during following match, KO the hero regardless the HP.",Ongoing
+163,Train Black Widows in the Red Room,"Black Widows overburden the system.
+
+During Setup, pick the total of heroes minus 1, and shuffle 14 S.H.I.E.L.D. officers into the hero deck. You may recruit the S.H.I.E.L.D. officers from the HQ.",Ongoing
+164,Halved All Life in the Universe,"""I am.. Inevitable!"" *snap*
+
+All Agencies (except for the player who wins) KO half of their heroes (rounded up). KO half of the Free Agents (rounded up). Then KO the top 10 cards of the Hero Pile.",One-off
+165,Sacrifice For the Soul Stone,"A soul for a soul.
+
+At the end of the game, heroes with the most KO-ed cards in the match is KO-ed.",One-off
+166,Time Heist,"Nexus event 
+
+",
+167,Warp Reality into a TV Show,"The Hex consume the reality.
+
+",

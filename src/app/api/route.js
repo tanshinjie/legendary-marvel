@@ -1,4 +1,8 @@
+import { prisma } from "../../core/prisma";
+
 export async function GET(request) {
+  const agency = await prisma.agency.findMany();
+  console.log(agency);
   return new Response(JSON.stringify({ message: "OK" }));
 }
 

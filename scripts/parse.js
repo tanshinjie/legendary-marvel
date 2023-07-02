@@ -68,25 +68,51 @@ const freeHenchmen = [];
 //     );
 //   });
 
-const _mastermind = [];
-const mastermindAlwaysLead = [];
-fs.createReadStream(path.resolve(__dirname, "../data/_mastermind.csv"))
+// const _mastermind = [];
+// const mastermindAlwaysLead = [];
+// fs.createReadStream(path.resolve(__dirname, "../data/_mastermind.csv"))
+//   .pipe(csv())
+//   .on("data", (data) => _mastermind.push(data))
+//   .on("end", () => {
+//     _mastermind.forEach((result, idx) => {
+//       if (result["Mastermind"]) {
+//         let mastermind = result["Mastermind"];
+//         let alwaysLead = result["Always Lead"];
+//         mastermindAlwaysLead.push({
+//           id: idx + 1,
+//           mastermind,
+//           alwaysLead,
+//         });
+//       }
+//       fs.writeFileSync(
+//         path.resolve(__dirname, "../public/mastermindAlwaysLead.json"),
+//         JSON.stringify(mastermindAlwaysLead)
+//       );
+//     });
+//   });
+
+const _consequences = [];
+const consequences = [];
+fs.createReadStream(path.resolve(__dirname, "../data/_consequences.csv"))
   .pipe(csv())
-  .on("data", (data) => _mastermind.push(data))
+  .on("data", (data) => _consequences.push(data))
   .on("end", () => {
-    _mastermind.forEach((result, idx) => {
-      if (result["Mastermind"]) {
-        let mastermind = result["Mastermind"];
-        let alwaysLead = result["Always Lead"];
-        mastermindAlwaysLead.push({
+    console.log(_consequences);
+    _consequences.forEach((result, idx) => {
+      if (result["Schemes"]) {
+        let scheme = result["Schemes"];
+        let consequence = result["Consequences"];
+        let effect = result["Effect"];
+        consequences.push({
           id: idx + 1,
-          mastermind,
-          alwaysLead,
+          scheme,
+          consequence,
+          effect,
         });
       }
-      fs.writeFileSync(
-        path.resolve(__dirname, "../public/mastermindAlwaysLead.json"),
-        JSON.stringify(mastermindAlwaysLead)
-      );
     });
+    fs.writeFileSync(
+      path.resolve(__dirname, "../public/consequences.json"),
+      JSON.stringify(consequences)
+    );
   });

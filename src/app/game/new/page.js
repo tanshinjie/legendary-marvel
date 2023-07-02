@@ -1,6 +1,7 @@
 "use client";
 
 import { useContext, useEffect, useState } from "react";
+import consequences from "../../../../public/consequences.json";
 import heroes from "../../../../public/heroes.json";
 import masterminds from "../../../../public/masterminds.json";
 import schemes from "../../../../public/schemes.json";
@@ -64,7 +65,13 @@ export default function Game() {
     newGameState.agencies = agencyParticipation;
     // TODO: Remove hardcode
     newGameState.freeAgents = [];
+    const consequence =
+      gameResult.toUpperCase() === "LOSE"
+        ? consequences.find((c) => c.scheme === gameState.scheme.name)
+        : null;
+    newGameState.consequence = consequence;
     setGameState(newGameState);
+    console.log(consequences.find((c) => c.scheme === gameState.scheme.name));
     const payload = {
       game: {
         ...newGameState,
@@ -83,7 +90,21 @@ export default function Game() {
       },
       body: JSON.stringify(payload),
     }).then((res) => res.json());
-    console.log(resp);
+
+    const consequencePayload = {
+      id: searchParams.get("campaignId"),
+      consequence: consequence,
+    };
+    consequencePayload.consequence.status = "ON";
+
+    const resp2 = await fetch("/api/campaign", {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(consequencePayload),
+    }).then((res) => res.json());
+
     setSteps(7);
   };
 
@@ -328,6 +349,15 @@ export default function Game() {
         <>
           <h1 className="font-bold">Game summary:</h1>
           <div>{JSON.stringify(gameState)}</div>
+          <div className="mt-4" />
+          {gameState.consequence && (
+            <div>
+              <h3 className="font-bold">
+                NOTE: You lost in the scheme. The consequence is:
+              </h3>
+              <p>{gameState.consequence.consequence}</p>
+            </div>
+          )}
           <div className="space-x-2">
             <button className="bg-blue-500 py-2 px-4" onClick={nextGame}>
               Next game

@@ -9,6 +9,11 @@ export default function CampaignPage({ params }) {
   const router = useRouter();
   const [campaignState] = useContext(CampaignContext);
 
+  const { data: campaignData, __isLoading } = useSWR(
+    "/api/campaign?id=" + params.id,
+    fetcher
+  );
+
   const { data: agencyData, isLoading } = useSWR(
     "/api/agency?campaignId=" + params.id,
     fetcher
@@ -19,7 +24,7 @@ export default function CampaignPage({ params }) {
     fetcher
   );
 
-  if (isLoading || _isLoading) {
+  if (isLoading || _isLoading || __isLoading) {
     return <div>Loading...</div>;
   }
 
@@ -29,7 +34,7 @@ export default function CampaignPage({ params }) {
 
       <div>
         <h3 className="font-bold my-4">Active consequnces</h3>
-        <div>{JSON.stringify(campaignState.consequences)}</div>
+        <div>{JSON.stringify(campaignData.consequences)}</div>
       </div>
 
       <div>
@@ -39,12 +44,12 @@ export default function CampaignPage({ params }) {
 
       <div>
         <h3 className="font-bold">Free Villains</h3>
-        <div>{JSON.stringify(campaignState.freeVillains)}</div>
+        <div>{JSON.stringify(campaignData.freeVillains)}</div>
       </div>
 
       <div>
         <h3 className="font-bold">Free Agents</h3>
-        <div>{JSON.stringify(campaignState.freeAgents)}</div>
+        <div>{JSON.stringify(campaignData.freeAgents)}</div>
       </div>
 
       <div>
