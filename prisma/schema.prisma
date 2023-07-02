@@ -1,0 +1,195 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+// Basic schema
+// model Hero {
+//   id             Int              @id @map("_id")
+//   name           String
+//   GameMainHero   GameMainHero[]
+//   GameAgencyHero GameAgencyHero[]
+//   GameFreeAgent  GameFreeAgent[]
+//   Campaign       Campaign?        @relation(fields: [campaignId], references: [id])
+//   campaignId     Int?
+
+//   @@index([campaignId])
+// }
+
+// model Mastermind {
+//   id             Int              @id @map("_id")
+//   name           String
+//   GameMastermind GameMastermind[]
+// }
+
+// model Scheme {
+//   id            Int          @id @map("_id")
+//   name          String
+//   consequence   Consequence  @relation(fields: [consequenceId], references: [id])
+//   consequenceId Int          @unique
+//   Game          Game[]
+//   GameScheme    GameScheme[]
+//   Campaign      Campaign[]
+// }
+
+// model Consequence {
+//   id                  Int                   @id @map("_id")
+//   name                String
+//   scheme              Scheme?
+//   CampaignConsequence CampaignConsequence[]
+// }
+
+// model Henchman {
+//   id           Int            @id @map("_id")
+//   name         String
+//   Game         Game?          @relation(fields: [gameId], references: [id])
+//   gameId       Int?
+//   GameHenchman GameHenchman[]
+//   Campaign     Campaign?      @relation(fields: [campaignId], references: [id])
+//   campaignId   Int?
+
+//   @@index([campaignId])
+//   @@index([gameId])
+// }
+
+// model Villain {
+//   id              Int               @id @map("_id")
+//   name            String
+//   Campaign        Campaign?         @relation(fields: [campaignId], references: [id])
+//   campaignId      Int?
+//   Game            Game?             @relation(fields: [gameId], references: [id])
+//   gameId          Int?
+//   GameFreeVillain GameFreeVillain[]
+
+//   @@index([campaignId])
+//   @@index([gameId])
+// }
+
+// Game schema
+
+// model GameMainHero {
+//   id     Int   @id @map("_id")
+//   gameId Int
+//   hero   Json
+//   heroId Int
+//   state  State
+//   Game   Game?
+
+//   @@index([gameId])
+//   @@index([heroId])
+// }
+
+// model GameFreeAgent {
+//   id         Int       @id @map("_id")
+//   game       Game      @relation(fields: [gameId], references: [id])
+//   gameId     Int
+//   hero       Json
+//   heroId     Int
+//   state      State
+//   Campaign   Campaign? @relation(fields: [campaignId], references: [id])
+//   campaignId Int?
+
+//   @@index([gameId])
+//   @@index([heroId])
+// }
+
+// model GameMastermind {
+//   id           Int    @id @map("_id")
+//   gameId       Int
+//   mastermind   Json
+//   mastermindId Int
+//   state        State
+//   Game         Game[]
+
+//   @@index([gameId])
+//   @@index([mastermindId])
+// }
+
+// model GameFreeVillain {
+//   id         Int       @id @map("_id")
+//   game       Game      @relation(fields: [gameId], references: [id])
+//   gameId     Int
+//   villain    Json
+//   villainId  Int
+//   state      State
+//   Campaign   Campaign? @relation(fields: [campaignId], references: [id])
+//   campaignId Int?
+
+//   @@index([campaignId])
+//   @@index([gameId])
+//   @@index([villainId])
+// }
+
+// model GameHenchman {
+//   id         Int   @id @map("_id")
+//   game       Game  @relation(fields: [gameId], references: [id])
+//   gameId     Int
+//   henchman   Json
+//   henchmanId Int
+//   state      State
+
+//   @@index([gameId])
+//   @@index([henchmanId])
+// }
+
+// model GameScheme {
+//   id       Int  @id @map("_id")
+//   game     Game @relation(fields: [gameId], references: [id])
+//   gameId   Int
+//   scheme   Json
+//   schemeId Int
+
+//   @@index([gameId])
+//   @@index([schemeId])
+// }
+
+model Agency {
+  id         String @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  heroes     Json[]
+  campaignId String @db.ObjectId
+}
+
+model Game {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  agencies     Json[]
+  campaignId   String
+  endTime      DateTime
+  freeAgents   Json[]
+  freeVillains Json[]
+  henchmen     Json[]
+  mainHero     Json
+  mastermind   Json
+  outcome      Outcome
+  scheme       Json
+  startTime    DateTime
+}
+
+enum Outcome {
+  WIN
+  LOSE
+  DRAW
+}
+
+enum State {
+  ALIVE
+  RETIRED
+  DEAD
+  CAPTURED
+}
+
+model Campaign {
+  id           String @id @default(auto()) @map("_id") @db.ObjectId
+  Game         Json[]
+  freeVillains Json[]
+  freeAgents   Json[]
+  consequences Json[]
+}
