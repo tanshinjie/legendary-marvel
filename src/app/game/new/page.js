@@ -392,7 +392,7 @@ function randomHenchmen() {
   return freeHenchmen[Math.floor(Math.random() * freeHenchmen.length)];
 }
 
-function CustomCombobox(props) {
+export function CustomCombobox(props) {
   const { options, onChangeHandler, selected } = props;
   const [query, setQuery] = useState("");
 
